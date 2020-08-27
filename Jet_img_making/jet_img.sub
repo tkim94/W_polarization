@@ -1,0 +1,26 @@
+#!/bin/csh
+
+date
+
+#$ -M tkim12@nd.edu
+#$ -m abe
+#$ -q long
+#$ -pe smp 4
+#$ -N pp2wz_pt200        # Specify job name
+
+module load python/2.7.15
+
+
+date
+
+python2.7 /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/img_code/Jet_single_evnt-to-image_creator-pTdep.py /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/no_cut/ number 0
+
+python2.7 /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/img_code/Jet_single_evnt-to-image_creator-pTdep.py /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/no_cut/ number 1
+
+python2.7 /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/img_code/Jet_single_evnt-to-image_creator-pTdep.py /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/no_cut/ number 2
+
+python2.7 /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/img_code/Jet_single_evnt-to-image_creator-pTdep.py /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/no_cut/ number 3
+
+python2.7 /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/img_code/Jet_single_evnt-to-image_creator-pTdep.py /afs/crc.nd.edu/user/t/tkim12/Work/MadGraph/TRR_clustering/pTwindow200-300/pp2wz/no_cut/ number 4
+
+date  # Sends emails when it starts & completed
